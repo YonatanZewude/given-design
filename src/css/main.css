@@ -164,6 +164,40 @@ body {
   margin-top: 20px;
 }
 
+#contact {
+  background-color: black;
+  padding: auto;
+}
+
+.contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 50px;
+  color: white;
+  font-size: 1.2em;
+}
+.contact__info {
+  margin-left: 60px;
+  text-align: left;
+  padding: 0;
+}
+.contact__social {
+  background-color: 255;
+  margin-left: 60px;
+}
+.contact__social-item {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.contact__social-text {
+  margin-top: 4px;
+}
+
 .navigation {
   padding: 20px;
   display: flex;
