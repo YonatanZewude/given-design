@@ -43,8 +43,88 @@ body {
 
 .aboutPage {
   width: 100%;
-  height: 120vh;
+  height: auto;
+}
+.aboutPage__title {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 2em;
+}
+.aboutPage__profile__container__parent {
+  width: 100%;
+  height: 230vh;
   background-color: aquamarine;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .aboutPage__profile__container__parent {
+    height: 170vh;
+  }
+}
+.aboutPage__profile__container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border: 1px solid rgb(255, 0, 0);
+  background-color: rgb(80, 151, 226);
+  height: 50vh;
+}
+@media screen and (min-width: 1024px) {
+  .aboutPage__profile__container {
+    height: auto;
+  }
+  .aboutPage__profile__container__name {
+    font-size: 7.2em;
+  }
+  .aboutPage__profile__container:nth-child(1), .aboutPage__profile__container:nth-child(2), .aboutPage__profile__container:nth-child(3) {
+    grid-area: 1/1, 1/2, 2/1;
+  }
+  .aboutPage__profile__container:nth-child(4) {
+    grid-area: 2/2;
+  }
+}
+
+.profile {
+  padding: 0;
+  margin: 0;
+}
+.profile__name {
+  font-size: 1.2em;
+  text-align: center;
+}
+.profile__img__container {
+  width: 250px;
+  height: 250px;
+  border: green 2px solid;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50%;
+  padding: 0;
+  margin-top: 0;
+  Background-size: cover;
+  background-position: center;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .profile__img__container {
+    width: 400px;
+    height: 400px;
+  }
+}
+.profile .container1 {
+  background-image: url("../assets/profiles/Rakib_Square.png");
+}
+.profile .container2 {
+  background-image: url("../assets/profiles/Alexandra_Square.png");
+}
+.profile .container3 {
+  background-image: url("../assets/profiles/NoPerson_Square.png");
+}
+.profile .container4 {
+  background-image: url("../assets/profiles/Sebastian_Square.png");
 }
 
 .navigation {
