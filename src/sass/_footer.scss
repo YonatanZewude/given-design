@@ -16,13 +16,11 @@
 
     @include m.common-styles;
 
-
     @media screen and (min-width: v.$desktop_brakepoint) {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
     }
-
 
     &__info {
         margin-left: 100px;
