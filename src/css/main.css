@@ -10,11 +10,21 @@ body {
 .startPage {
   width: 100%;
   height: 100vh;
-  background-color: aqua;
   background-image: url(../assets/negative-space-black-forest-dawn.jpg);
   Background-size: cover;
   background-position: center;
   position: relative;
+}
+.startPage__arrow__down-white {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 40px;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+.startPage__arrow__down-white a {
+  color: whitesmoke;
+  font-size: 18px;
 }
 
 .home__text__container {
@@ -22,22 +32,21 @@ body {
   text-align: center;
   position: absolute;
   width: 260px;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  position: relative;
 }
 @media screen and (min-width: 1024px) {
   .home__text__container {
     width: 600px;
   }
 }
-
-.intro {
+.home__text__container .intro {
   font-size: 2em;
   margin-bottom: 50px;
 }
-
-.caption {
+.home__text__container .caption {
   font-size: 1.3em;
 }
 
@@ -83,6 +92,15 @@ body {
     grid-area: 2/2;
   }
 }
+.aboutPage__arrow__down-black {
+  margin-bottom: 20px;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+.aboutPage__arrow__down-black a {
+  color: black;
+  font-size: 18px;
+}
 
 .profile {
   padding: 0;
@@ -113,16 +131,16 @@ body {
     height: 300px;
   }
 }
-.profile .container1 {
+.profile__img__container.container1 {
   background-image: url("../assets/profiles/Rakib_Square.png");
 }
-.profile .container2 {
+.profile__img__container.container2 {
   background-image: url("../assets/profiles/Alexandra_Square.png");
 }
-.profile .container3 {
+.profile__img__container.container3 {
   background-image: url("../assets/profiles/NoPerson_Square.png");
 }
-.profile .container4 {
+.profile__img__container.container4 {
   background-image: url("../assets/profiles/Sebastian_Square.png");
 }
 .profile__info {
@@ -164,7 +182,7 @@ body {
   margin-top: 20px;
 }
 
-#contact {
+#contactPage {
   background-color: black;
   padding: auto;
 }
@@ -225,6 +243,24 @@ body {
   text-decoration-line: underline;
 }
 
+#menu_toggle {
+  opacity: 0;
+}
+#menu_toggle:checked + .menu_btn > span {
+  transform: rotate(45deg);
+}
+#menu_toggle:checked + .menu_btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu_toggle:checked + .menu_btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu_toggle:checked ~ .menu_box {
+  right: 0 !important;
+}
+
 .menu_box {
   list-style-type: none;
   display: flex;
@@ -243,24 +279,6 @@ body {
 }
 .menu_box a:hover {
   text-decoration-line: underline;
-}
-
-#menu_toggle {
-  opacity: 0;
-}
-#menu_toggle:checked + .menu_btn > span {
-  transform: rotate(45deg);
-}
-#menu_toggle:checked + .menu_btn > span::before {
-  top: 0;
-  transform: rotate(0deg);
-}
-#menu_toggle:checked + .menu_btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
-}
-#menu_toggle:checked ~ .menu_box {
-  right: 0 !important;
 }
 
 @media screen and (max-width: 460px) {

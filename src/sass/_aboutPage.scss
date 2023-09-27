@@ -1,4 +1,5 @@
 @use "../sass/variables" as v;
+@use "../sass/mixins" as m;
 
 
 .aboutPage {
@@ -55,6 +56,18 @@
             }
         }
     }
+
+    &__arrow__down-black {
+        margin-bottom: 20px;
+        margin-left: 50%;
+        margin-right: 50%;
+
+        a {
+            color: black;
+            font-size: 18px;
+
+        }
+    }
 }
 
 .profile {
@@ -67,46 +80,32 @@
     }
 
     &__img__container {
-        width: 250px;
-        height: 250px;
-        text-align: center;
-        margin-right: auto;
-        margin-left: auto;
-        border-radius: 50%;
-        padding: 0;
-        margin-top: 0;
-        Background-size: cover;
-        background-position: center;
-        position: relative;
-        box-shadow: 0 0 30px 1px rgb(107, 107, 107);
-        transition: width 0.8s, height 0.8s;
 
-        @media screen and (min-width: v.$desktop_brakepoint) {
-            width: 300px;
-            height: 300px;
+        @include m.profile-img;
+
+        &.container1 {
+            background-image: url("../assets/profiles/Rakib_Square.png");
+
+        }
+
+        &.container2 {
+            background-image: url("../assets/profiles/Alexandra_Square.png");
+
+        }
+
+        &.container3 {
+            background-image: url("../assets/profiles/NoPerson_Square.png");
+
+        }
+
+        &.container4 {
+            background-image: url("../assets/profiles/Sebastian_Square.png");
+
         }
 
     }
 
-    .container1 {
-        background-image: url("../assets/profiles/Rakib_Square.png");
 
-    }
-
-    .container2 {
-        background-image: url("../assets/profiles/Alexandra_Square.png");
-
-    }
-
-    .container3 {
-        background-image: url("../assets/profiles/NoPerson_Square.png");
-
-    }
-
-    .container4 {
-        background-image: url("../assets/profiles/Sebastian_Square.png");
-
-    }
 
     &__info {
         width: 90%;
